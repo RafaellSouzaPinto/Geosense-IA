@@ -1,0 +1,164 @@
+{
+  "updated_at": "2025-09-18T20:48:51.359405",
+  "sources": {
+    "video.mp4": {
+      "updated_at": "2025-09-18T20:43:43.792765",
+      "motos": [
+        {
+          "source": "video.mp4",
+          "track_id": 1,
+          "x": 1126.23,
+          "y": 709.15,
+          "detected_at": "2025-09-18T20:43:43.366670",
+          "db_id": 83
+        },
+        {
+          "source": "video.mp4",
+          "track_id": 2,
+          "x": 611.88,
+          "y": 688.38,
+          "detected_at": "2025-09-18T20:43:43.366670",
+          "db_id": 84
+        },
+        {
+          "source": "video.mp4",
+          "track_id": 3,
+          "x": 1218.06,
+          "y": 614.96,
+          "detected_at": "2025-09-18T20:43:43.366670",
+          "db_id": 85
+        },
+        {
+          "source": "video.mp4",
+          "track_id": 4,
+          "x": 1396.04,
+          "y": 591.92,
+          "detected_at": "2025-09-18T20:43:43.762759",
+          "db_id": 86
+        }
+      ]
+    },
+    "imagem.jpg": {
+      "updated_at": "2025-09-18T20:48:51.359405",
+      "motos": [
+        {
+          "source": "imagem.jpg",
+          "track_id": 1,
+          "x": 542.36,
+          "y": 437.72,
+          "detected_at": "2025-09-18T20:44:07.899669",
+          "db_id": 87
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 2,
+          "x": 368.84,
+          "y": 431.12,
+          "detected_at": "2025-09-18T20:44:07.899669",
+          "db_id": 88
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 3,
+          "x": 180.54,
+          "y": 422.65,
+          "detected_at": "2025-09-18T20:44:07.899669",
+          "db_id": 89
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 4,
+          "x": 41.23,
+          "y": 348.61,
+          "detected_at": "2025-09-18T20:44:07.899669",
+          "db_id": 90
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 5,
+          "x": 741.49,
+          "y": 425.3,
+          "detected_at": "2025-09-18T20:44:07.899669",
+          "db_id": 91
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 6,
+          "x": 882.29,
+          "y": 431.44,
+          "detected_at": "2025-09-18T20:44:07.899669",
+          "db_id": 92
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 1,
+          "x": 542.36,
+          "y": 437.72,
+          "detected_at": "2025-09-18T20:48:51.161065",
+          "db_id": 100,
+          "run_id": "5241b54e-68e8-4930-b1c4-a5490fd74416"
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 2,
+          "x": 368.84,
+          "y": 431.12,
+          "detected_at": "2025-09-18T20:48:51.161065",
+          "db_id": 101,
+          "run_id": "5241b54e-68e8-4930-b1c4-a5490fd74416"
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 3,
+          "x": 180.54,
+          "y": 422.65,
+          "detected_at": "2025-09-18T20:48:51.161065",
+          "db_id": 102,
+          "run_id": "5241b54e-68e8-4930-b1c4-a5490fd74416"
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 4,
+          "x": 41.23,
+          "y": 348.61,
+          "detected_at": "2025-09-18T20:48:51.161065",
+          "db_id": 103,
+          "run_id": "5241b54e-68e8-4930-b1c4-a5490fd74416"
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 5,
+          "x": 741.49,
+          "y": 425.3,
+          "detected_at": "2025-09-18T20:48:51.161065",
+          "db_id": 104,
+          "run_id": "5241b54e-68e8-4930-b1c4-a5490fd74416"
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 6,
+          "x": 882.29,
+          "y": 431.44,
+          "detected_at": "2025-09-18T20:48:51.161065",
+          "db_id": 105,
+          "run_id": "5241b54e-68e8-4930-b1c4-a5490fd74416"
+        }
+      ]
+    },
+    "webcam_0": {
+      "updated_at": "2025-09-18T20:44:49.014926",
+      "motos": [
+        {
+          "source": "webcam_0",
+          "track_id": 1,
+          "x": 411.23,
+          "y": 285.48,
+          "detected_at": "2025-09-18T20:44:48.981919",
+          "db_id": 93
+        }
+        
+      ]
+    }
+  },
+  "run_id": "5241b54e-68e8-4930-b1c4-a5490fd74416"
+}
