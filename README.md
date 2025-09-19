@@ -959,16 +959,6 @@ echo $env:ORACLE_HOST
 | ⚡ **Deep Learning**       | **PyTorch Foundation**    | Framework de IA                    |
 | 🗄️ **Database Solution**   | **Oracle Corporation**    | Persistência empresarial           |
 
-<div align="center">
-
-### 🌟 **Comunidade Open Source**
-
-**Agradecimento especial a toda a comunidade open source que torna projetos como este possíveis!**
-
-_Sem vocês, a inovação não seria democratizada_ 🚀
-
-</div>
-
 ---
 
 ## 📄 **Licenças e Disclaimer**
