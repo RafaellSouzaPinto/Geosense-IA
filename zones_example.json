@@ -1,0 +1,30 @@
+{
+  "frame_reference": [1280, 720],
+  "normalized": true,
+  "zones": [
+    {
+      "name": "Manutenção Rápida",
+      "purpose": "Troca de óleo e reparos leves",
+      "capacity": 12,
+      "color": [0, 200, 0],
+      "points": [
+        [0.02, 0.08],
+        [0.48, 0.08],
+        [0.48, 0.95],
+        [0.02, 0.95]
+      ]
+    },
+    {
+      "name": "Diagnóstico Elétrico",
+      "purpose": "Farol, painel, bateria",
+      "capacity": 8,
+      "color": [0, 120, 255],
+      "points": [
+        [0.52, 0.08],
+        [0.98, 0.08],
+        [0.98, 0.95],
+        [0.52, 0.95]
+      ]
+    }
+  ]
+}
