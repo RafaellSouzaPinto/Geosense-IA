@@ -292,25 +292,6 @@ python geosense_tracker.py --show
 | `Y`           | `NUMBER(10,2)` | Coordenada Y da detecção |
 | `DETECTED_AT` | `TIMESTAMP`    | Timestamp da detecção    |
 
-**🔗 Configuração Padrão:**
-
-- 🏠 **Host:** `oracle.fiap.com.br`
-- 🚪 **Porta:** `1521`
-- 🎯 **Service:** `orcl`
-- 👤 **Usuário:** `RM555130`
-
-<details>
-<summary><b>⚙️ Configuração Avançada</b></summary>
-
-```powershell
-# Variáveis de ambiente (PowerShell)
-$env:ORACLE_USER = "RM555130"
-$env:ORACLE_PASSWORD = "040506"
-$env:ORACLE_HOST = "oracle.fiap.com.br"
-$env:ORACLE_PORT = "1521"
-$env:ORACLE_SERVICE = "orcl"
-```
-
 **📋 Pré-requisitos:**
 
 - ✅ Driver `oracledb` incluído no `requirements.txt`
