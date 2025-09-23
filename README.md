@@ -207,20 +207,6 @@ python -m src.main --menu
 # Debug mode
 python -m src.main --source debug.mp4 --show --conf 0.1
 ```
-
-## 📋 Próximos Passos
-
-- [ ] Implementar testes unitários
-- [ ] Adicionar suporte a zonas de detecção
-- [ ] Interface web para monitoramento
-- [ ] API REST para integração
-- [ ] Análise de padrões de movimento
-- [ ] Relatórios automatizados
-
-## 🤝 Contribuição
-
-Este projeto foi reorganizado para facilitar contribuições. Cada módulo tem responsabilidade clara e pode ser desenvolvido independentemente.
-
 ## 📝 Licença
 
 Desenvolvido para Mottu x FIAP - Sprint 2 IoT.
