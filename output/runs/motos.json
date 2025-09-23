@@ -1,0 +1,106 @@
+{
+  "updated_at": "2025-09-23T19:21:36.759869",
+  "sources": {
+    "video.mp4": {
+      "updated_at": "2025-09-23T19:21:12.837428",
+      "motos": [
+        {
+          "source": "video.mp4",
+          "track_id": 1,
+          "x": 1126.23,
+          "y": 709.15,
+          "detected_at": "2025-09-23T19:21:12.365356",
+          "db_id": 122,
+          "run_id": "44ee790d-a43e-4c4a-bcac-4b920fd5e6f6"
+        },
+        {
+          "source": "video.mp4",
+          "track_id": 2,
+          "x": 611.88,
+          "y": 688.38,
+          "detected_at": "2025-09-23T19:21:12.365356",
+          "db_id": 123,
+          "run_id": "44ee790d-a43e-4c4a-bcac-4b920fd5e6f6"
+        },
+        {
+          "source": "video.mp4",
+          "track_id": 3,
+          "x": 1218.06,
+          "y": 614.96,
+          "detected_at": "2025-09-23T19:21:12.365356",
+          "db_id": 124,
+          "run_id": "44ee790d-a43e-4c4a-bcac-4b920fd5e6f6"
+        },
+        {
+          "source": "video.mp4",
+          "track_id": 4,
+          "x": 1396.04,
+          "y": 591.92,
+          "detected_at": "2025-09-23T19:21:12.792114",
+          "db_id": 125,
+          "run_id": "44ee790d-a43e-4c4a-bcac-4b920fd5e6f6"
+        }
+      ]
+    },
+    "imagem.jpg": {
+      "updated_at": "2025-09-23T19:21:36.759869",
+      "motos": [
+        {
+          "source": "imagem.jpg",
+          "track_id": 1,
+          "x": 542.36,
+          "y": 437.72,
+          "detected_at": "2025-09-23T19:21:36.542663",
+          "db_id": 126,
+          "run_id": "edad4826-0925-49a7-b3d1-1f2223041d6c"
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 2,
+          "x": 368.84,
+          "y": 431.12,
+          "detected_at": "2025-09-23T19:21:36.542663",
+          "db_id": 127,
+          "run_id": "edad4826-0925-49a7-b3d1-1f2223041d6c"
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 3,
+          "x": 180.54,
+          "y": 422.65,
+          "detected_at": "2025-09-23T19:21:36.542663",
+          "db_id": 128,
+          "run_id": "edad4826-0925-49a7-b3d1-1f2223041d6c"
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 4,
+          "x": 41.23,
+          "y": 348.61,
+          "detected_at": "2025-09-23T19:21:36.542663",
+          "db_id": 129,
+          "run_id": "edad4826-0925-49a7-b3d1-1f2223041d6c"
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 5,
+          "x": 741.49,
+          "y": 425.3,
+          "detected_at": "2025-09-23T19:21:36.542663",
+          "db_id": 130,
+          "run_id": "edad4826-0925-49a7-b3d1-1f2223041d6c"
+        },
+        {
+          "source": "imagem.jpg",
+          "track_id": 6,
+          "x": 882.29,
+          "y": 431.44,
+          "detected_at": "2025-09-23T19:21:36.542663",
+          "db_id": 131,
+          "run_id": "edad4826-0925-49a7-b3d1-1f2223041d6c"
+        }
+      ]
+    }
+  },
+  "run_id": "edad4826-0925-49a7-b3d1-1f2223041d6c"
+}
