@@ -190,23 +190,6 @@ python geosense.py --reassoc-window 60 --reassoc-iou 0.4
 - **UI**: Concentra toda interação com usuário
 - **Utils**: Agrupa utilitários reutilizáveis
 
-## 🧪 Desenvolvimento
-
-### Executar Testes
-
-```bash
-python -m pytest tests/
-```
-
-### Estrutura de Desenvolvimento
-
-```bash
-# Desenvolvimento local
-python -m src.main --menu
-
-# Debug mode
-python -m src.main --source debug.mp4 --show --conf 0.1
-```
 ## 📝 Licença
 
 Desenvolvido para Mottu x FIAP - Sprint 2 IoT.
