@@ -206,12 +206,12 @@ python geosense.py --source video.mp4 --conf 0.5 --show
 ### Sistema de Logging
 
 - **JSON Estruturado**: Logs organizados por fonte
-- **Integração Oracle**: Opção de banco de dados empresarial
+- **Integração Oracle**: Banco de dados 
 - **Dados Incrementais**: Atualização contínua sem duplicatas
 
 ## 🔧 Configuração Avançada
 
-### Banco Oracle (Opcional)
+### Banco Oracle
 
 Configure variáveis de ambiente para integração com Oracle:
 
@@ -261,130 +261,6 @@ python geosense.py --reassoc-window 60 --reassoc-iou 0.4
   }
 }
 ```
-
-## 📈 Melhorias da Organização
-
-### Benefícios da Nova Estrutura
-
-1. **Modularidade**: Cada funcionalidade em módulo dedicado
-2. **Manutenibilidade**: Código mais fácil de entender e modificar
-3. **Testabilidade**: Módulos independentes facilitam testes
-4. **Escalabilidade**: Estrutura preparada para crescimento
-5. **Reutilização**: Componentes podem ser usados independentemente
-
-### Separação de Responsabilidades
-
-- **Config**: Centraliza toda configuração de argumentos
-- **Detection**: Isola lógica de detecção e rastreamento
-- **Processing**: Separa processamento de imagem e vídeo
-- **Logging**: Abstrai sistemas de persistência
-- **UI**: Concentra toda interação com usuário
-- **Utils**: Agrupa utilitários reutilizáveis
-
-## 🧪 Desenvolvimento
-
-### Executar Testes
-
-```bash
-python -m pytest tests/
-```
-
-### Estrutura de Desenvolvimento
-
-```bash
-# Desenvolvimento local
-python -m src.main --menu
-
-# Debug mode
-python -m src.main --source debug.mp4 --show --conf 0.1
-```
-
-## 🔧 Troubleshooting
-
-### Problemas Comuns
-
-#### Erro: "python não é reconhecido"
-
-```bash
-# Verificar se Python está instalado
-python --version
-
-# Se não estiver, instalar Python 3.8+ do site oficial
-# https://www.python.org/downloads/
-```
-
-#### Erro: "módulo não encontrado"
-
-```bash
-# Verificar se o ambiente virtual está ativado
-# Deve aparecer (.venv) no início do prompt
-
-# Se não estiver ativado:
-.venv\Scripts\activate  # Windows
-source .venv/bin/activate  # Linux/Mac
-
-# Reinstalar dependências
-pip install -r requirements.txt
-```
-
-#### Erro: "CUDA out of memory"
-
-```bash
-# Usar CPU em vez de GPU
-python geosense.py --source video.mp4 --device cpu
-
-# Ou reduzir resolução do vídeo
-python geosense.py --source video.mp4 --imgsz 640
-```
-
-#### Erro: "webcam não encontrada"
-
-```bash
-# Listar dispositivos disponíveis
-python -c "import cv2; print([i for i in range(10) if cv2.VideoCapture(i).isOpened()])"
-
-# Usar índice correto
-python geosense.py --webcam 1 --show  # Tenta câmera 1
-```
-
-#### Performance Lenta
-
-```bash
-# Usar modelo menor
-python geosense.py --source video.mp4 --model yolov8n.pt
-
-# Reduzir resolução
-python geosense.py --source video.mp4 --imgsz 416
-
-# Desabilitar visualização
-python geosense.py --source video.mp4  # Sem --show
-```
-
-### Verificação de Saúde do Sistema
-
-```bash
-# Verificar instalação completa
-python -c "import torch, ultralytics, cv2; print('✅ Todas as dependências OK')"
-
-# Verificar GPU (se disponível)
-python -c "import torch; print(f'CUDA disponível: {torch.cuda.is_available()}')"
-
-# Testar detecção básica
-python geosense.py --source data/media/images/imagem.jpg --show
-```
-
-## 📋 Próximos Passos
-
-- [ ] Implementar testes unitários
-- [ ] Adicionar suporte a zonas de detecção
-- [ ] Interface web para monitoramento
-- [ ] API REST para integração
-- [ ] Análise de padrões de movimento
-- [ ] Relatórios automatizados
-
-## 🤝 Contribuição
-
-Este projeto foi reorganizado para facilitar contribuições. Cada módulo tem responsabilidade clara e pode ser desenvolvido independentemente.
 
 ## 📝 Licença
 
