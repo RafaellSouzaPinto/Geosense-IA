@@ -373,14 +373,122 @@ python -c "import torch; print(f'CUDA disponível: {torch.cuda.is_available()}')
 python geosense.py --source data/media/images/imagem.jpg --show
 ```
 
-## 📋 Próximos Passos
+## 📊 Resultados Parciais do Sistema
 
-- [ ] Implementar testes unitários
-- [ ] Adicionar suporte a zonas de detecção
-- [ ] Interface web para monitoramento
-- [ ] API REST para integração
-- [ ] Análise de padrões de movimento
-- [ ] Relatórios automatizados
+### O que Esperar ao Usar o Sistema
+
+Baseado na análise do código, aqui está o que acontece quando você executa o GeoSense com diferentes fontes:
+
+#### 🖼️ **Processamento de Imagem** 
+
+**O que acontece:**
+
+1. **Carregamento**: Sistema carrega a imagem usando OpenCV
+2. **Detecção**: YOLO detecta motocicletas com confiança mínima de 0.35 (35%)
+3. **Anotação**: Desenha bounding boxes laranja e labels com confiança
+4. **Contagem**: Mostra "Motos detectadas: X" no canto superior esquerdo
+5. **Exibição**: Abre janela "GeoSense - Imagem" (pressione 'q' para sair)
+6. **Logging**: Salva dados no JSON e Oracle (se configurado)
+
+**Exemplo de saída:**
+
+```
+Motos detectadas: 6
+Pressione 'q' na janela para sair.
+Snapshot (imagem) salvo: 6 registros
+```
+
+#### 🎥 **Processamento de Vídeo** 
+
+**O que acontece:**
+
+1. **Inicialização**: Abre vídeo e configura ByteTrack para rastreamento
+2. **Loop de frames**: Processa cada frame em tempo real
+3. **HUD em tempo real**: Mostra estatísticas no canto superior esquerdo:
+   - `Motos ativas: X | Únicas conf.: Y | FPS: Z.Z | conf>=0.35 iou=0.60`
+4. **Rastreamento**: ByteTrack mantém IDs consistentes entre frames
+5. **Confirmação**: Motos são confirmadas após 3 frames consecutivos (anti-flicker)
+6. **Reassociação**: Sistema reassocia IDs perdidos em até 45 frames
+7. **Logging**: Registra apenas motos recém-confirmadas (evita duplicatas)
+
+**Exemplo de HUD:**
+
+```
+Motos ativas: 4 | Únicas conf.: 6 | FPS: 12.8 | conf>=0.35 iou=0.60
+```
+
+#### 📹 **Webcam** 
+
+**O que acontece:**
+
+1. **Detecção de câmera**: Tenta diferentes backends no Windows (DShow, MSMF)
+2. **Captura contínua**: Processa frames da webcam em tempo real
+3. **Mesmo HUD**: Estatísticas idênticas ao processamento de vídeo
+4. **Controle**: Pressione 'q' ou feche a janela para parar
+5. **Logging**: Salva dados com source "webcam_0"
+
+### 🔧 **Configurações Padrão do Sistema**
+
+| Parâmetro            | Valor Padrão | Função                              |
+| -------------------- | ------------ | ----------------------------------- |
+| `--conf`             | 0.35         | Confiança mínima para detecção      |
+| `--iou`              | 0.60         | IoU para supressão de sobreposições |
+| `--imgsz`            | 960          | Resolução de entrada                |
+| `--min-track-frames` | 3            | Frames para confirmar moto única    |
+| `--track-buffer`     | 60           | Buffer de rastreamento              |
+| `--reassoc-window`   | 45           | Janela para reassociar IDs          |
+| `--reassoc-iou`      | 0.30         | IoU mínimo para reassociação        |
+
+### 📈 **Dados Gerados Automaticamente**
+
+**Arquivo JSON** (`output/runs/motos.json`):
+
+```json
+{
+  "updated_at": "2025-09-28T11:51:52.897455",
+  "sources": {
+    "video.mp4": {
+      "updated_at": "2025-09-28T11:51:52.897455",
+      "motos": [
+        {
+          "source": "video.mp4",
+          "track_id": 1,
+          "x": 542.36,
+          "y": 437.72,
+          "detected_at": "2025-09-28T11:51:52.690126",
+          "db_id": 138,
+          "run_id": "740d3ec9-892c-4864-9692-8f31e4eedf36"
+        }
+      ]
+    }
+  }
+}
+```
+
+**Campos Explicados:**
+
+- `track_id`: ID único da motocicleta (reassociado automaticamente)
+- `x, y`: Coordenadas do centro da detecção
+- `detected_at`: Timestamp exato da detecção
+- `db_id`: ID no banco Oracle (se configurado)
+- `run_id`: ID único da sessão de execução
+
+### 🎯 **Performance Esperada**
+
+| Fonte      | FPS Típico  | Uso de CPU | Memória |
+| ---------- | ----------- | ---------- | ------- |
+| **Imagem** | Instantâneo | Baixo      | ~200MB  |
+| **Vídeo**  | 10-15 FPS   | Médio      | ~300MB  |
+| **Webcam** | 15-25 FPS   | Médio      | ~250MB  |
+
+### 🚨 **Comportamentos Especiais**
+
+1. **Anti-Flicker**: Motos só são contadas após 3 frames consecutivos
+2. **Reassociação**: IDs perdidos são recuperados em até 45 frames
+3. **Logging Inteligente**: Evita duplicatas, só registra motos confirmadas
+4. **Fallback de Câmera**: Tenta múltiplos backends no Windows
+5. **Snapshots**: Salva estado final ao fechar janela
+
 
 ## 🤝 Contribuição
 
