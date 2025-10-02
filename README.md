@@ -206,12 +206,12 @@ python geosense.py --source video.mp4 --conf 0.5 --show
 ### Sistema de Logging
 
 - **JSON Estruturado**: Logs organizados por fonte
-- **Integração Oracle**: Opção de banco de dados empresarial
+- **Integração Oracle**: Banco de dados
 - **Dados Incrementais**: Atualização contínua sem duplicatas
 
 ## 🔧 Configuração Avançada
 
-### Banco Oracle (Opcional)
+### Banco Oracle
 
 Configure variáveis de ambiente para integração com Oracle:
 
@@ -379,7 +379,7 @@ python geosense.py --source data/media/images/imagem.jpg --show
 
 Baseado na análise do código, aqui está o que acontece quando você executa o GeoSense com diferentes fontes:
 
-#### 🖼️ **Processamento de Imagem** 
+#### 🖼️ **Processamento de Imagem**
 
 **O que acontece:**
 
@@ -398,7 +398,7 @@ Pressione 'q' na janela para sair.
 Snapshot (imagem) salvo: 6 registros
 ```
 
-#### 🎥 **Processamento de Vídeo** 
+#### 🎥 **Processamento de Vídeo**
 
 **O que acontece:**
 
@@ -417,7 +417,7 @@ Snapshot (imagem) salvo: 6 registros
 Motos ativas: 4 | Únicas conf.: 6 | FPS: 12.8 | conf>=0.35 iou=0.60
 ```
 
-#### 📹 **Webcam** 
+#### 📹 **Webcam**
 
 **O que acontece:**
 
@@ -488,7 +488,6 @@ Motos ativas: 4 | Únicas conf.: 6 | FPS: 12.8 | conf>=0.35 iou=0.60
 3. **Logging Inteligente**: Evita duplicatas, só registra motos confirmadas
 4. **Fallback de Câmera**: Tenta múltiplos backends no Windows
 5. **Snapshots**: Salva estado final ao fechar janela
-
 
 ## 🤝 Contribuição
 
